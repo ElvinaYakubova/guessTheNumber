@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number</title>
+    <link rel = "stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <img src="guess-pic.jpeg" class="header__logo">
+    </header>
+    <div class="content">
+        <section class="start">
+            <h2 class="start__text">Select an interval for the number</h2>
+            <div class="bound bound_left">
+                <label class="bound__text">from</label>
+                <input type="number" class="bound__val bound__val_from"  placeholder="type the number">
+            </div>
+            <div class="bound bound_right">
+                <label class="bound__text">to</label>
+                <input type="number" class="bound__val bound__val_to" placeholder="type the number">
+            </div>
+            <div class="clearfix"></div>
+            <button class="start__btn start__btn_effect" onclick="startGame()">Start Game</button>
+        </section>
+        <section class="main hide">
+            <p class="main__text main__text_attention">Please enter the number</p>
+            <fieldset class="main__form">
+                <input type="number" class="main__input">
+            </fieldset>
+            <p class="main__text main__text_attemptsCnt"></p>
+            <p class="main__text main__text_ans">Waiting for input number</p>
+            <button class="main__btn main__btn_prev" onclick="showGuesses()">
+                Show previous guesses
+                <i class="fa fa-eye"></i>
+            </button>
+            <textarea class="main__output hide" disabled></textarea>
+        </section>
+
+    </div>
+</body>
+</html>
+
+
